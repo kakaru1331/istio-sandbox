@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
   - book-gateway.yaml
   - book-vs.yaml
+  # - details-vs.yaml
