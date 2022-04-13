@@ -5,7 +5,7 @@ resources:
   - ../../base
   - namespace.yaml
 components:
-  # - ../../components/details
+  - ../../components/details
   # - ../../components/reviews
   - ../../components/ui
   
