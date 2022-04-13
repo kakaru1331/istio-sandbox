@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: details-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: details
+  template:
+    metadata:
+      labels:
+        app: details
+    spec:
+      containers:
+        - name: details
+          env:
+            - name: TZ
+              value: Asia/Seoul          
+          image: book-details:0.1.0
+          resources: {}
+          ports:
+            - containerPort: 8080
