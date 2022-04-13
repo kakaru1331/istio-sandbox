@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reviews-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: reviews
+  template:
+    metadata:
+      labels:
+        app: reviews
+    spec:
+      containers:
+        - name: reviews
+          env:
+            - name: TZ
+              value: Asia/Seoul          
+          image: book-reviews:0.1.0
+          resources: {}
+          ports:
+            - containerPort: 8080

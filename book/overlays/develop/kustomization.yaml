@@ -6,6 +6,6 @@ resources:
   - namespace.yaml
 components:
   - ../../components/details
-  # - ../../components/reviews
+  - ../../components/reviews
   - ../../components/ui
   
