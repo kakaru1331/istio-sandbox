@@ -1,0 +1,21 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: details-vs
+spec:
+  hosts:
+  - details
+  http:
+  - fault:
+      delay:
+        fixedDelay: 5s
+        percentage:
+          value: 100
+    match:
+    - uri:
+        prefix: /
+    route:
+    - destination:
+        host: details
+        port:
+          number: 8080
