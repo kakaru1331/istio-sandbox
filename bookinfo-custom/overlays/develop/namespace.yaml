@@ -1,0 +1,6 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: bookinfo-custom-develop
+  labels:
+    istio-injection: enabled
