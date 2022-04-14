@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
   - bookinfo-gateway.yaml
   - bookinfo.yaml
+  - destination-rule-all.yaml
