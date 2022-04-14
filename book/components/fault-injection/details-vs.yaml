@@ -6,12 +6,7 @@ spec:
   hosts:
   - details
   http:
-  - fault:
-      delay:
-        fixedDelay: 5s
-        percentage:
-          value: 100
-    match:
+  - match:
     - uri:
         prefix: /
     route:
@@ -19,3 +14,12 @@ spec:
         host: details
         port:
           number: 8080
+    fault:
+      # delay:
+      #   fixedDelay: 5s
+      #   percentage:
+      #     value: 100
+      abort:
+        httpStatus: 500
+        percentage:
+          value: 100
