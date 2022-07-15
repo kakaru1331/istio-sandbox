@@ -43,7 +43,7 @@ spec:
         app: custom-authz
     spec:
       containers:
-      - image: kakaru/xauth:0.0.3
+      - image: kakaru/xauth:0.0.4
         imagePullPolicy: IfNotPresent
         name: custom-authz
         ports:
