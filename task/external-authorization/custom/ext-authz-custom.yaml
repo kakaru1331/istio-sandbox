@@ -43,7 +43,7 @@ spec:
         app: custom-authz
     spec:
       containers:
-      - image: kakaru/xauth:0.0.4
+      - image: ghcr.io/kakaru1331/xauth:latest
         imagePullPolicy: IfNotPresent
         name: custom-authz
         ports:
